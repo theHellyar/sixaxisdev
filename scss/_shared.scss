@@ -1,0 +1,52 @@
+//Colors
+$green: #92D44D;
+/* Button */
+@mixin button($bgColor: #fff, $color: $fourlife-blue-light, $shadow: false, $icon: false) {
+    @extend %button;
+
+    @if $shadow {
+        @include box-shadow();
+    }
+
+    @if $icon {
+        padding-left: $btn-icon-padding;
+        position: relative;
+
+        i.fa {
+            position: absolute;
+            top: calc(50% - .5em);
+            left: .75em;
+        }
+    }
+
+    background-color: $bgColor;
+    color: $color;
+
+    &:active {
+        background-color: darken($bgColor, 10%);
+    }
+
+    &:hover {
+        background-color: lighten($bgColor, 5);
+
+        @if $shadow {
+            @include box-shadow(5px, 5px, 10px, 0px, rgba(102,102,102, 0.75), false);
+        }
+    }
+
+//    &.btn-success {
+//        background-color: $dark-green !important;
+//        color: #fff !important;
+//    }
+//
+//    &.btn-error {
+//        background-color: $red !important;
+//        color: #fff !important;
+//    }
+}
+.btn-white {
+    @include button(#fff,$green,false, false);
+}
+.btn-green {
+    @include button($green,#fff,false, false);
+}

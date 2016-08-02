@@ -1,0 +1,153 @@
+body, html {
+    height: 100%;
+}
+body {
+    background: url("../onbudget/img/shop01.jpg") no-repeat;
+    background-size: cover;
+    margin:0;
+}
+.bg-green-stripe {
+    //    border-top:20px solid $green;
+    //    border-bottom:20px solid $green;
+    position: absolute;
+    top:50%;
+    @include transform(translateY(-50%));
+    background: transparentize($green, 0.07);
+    height: 400px;
+    width:100%;  
+    z-index:-1;
+}
+//.btn-white {
+//    background: #fff;
+//    color:$green;
+//}
+//.btn-green {
+//    background: $green;
+//    color:#fff;
+//}
+#landing-wrapper {
+    @include outer-container;
+    align-items: center;
+    padding:10px;
+    position: relative;
+    height: 100%;
+
+
+    @include media($medium-screen) {
+        display: flex;
+        padding:0px 30px;
+    }
+
+    .left-half {
+        @include span-columns(12);
+        display: table;
+        width: 100%;
+        @include media($medium-screen) {
+            @include span-columns(6);
+            display: table;
+        }
+        .left {
+            color:#fff;
+            display: table-cell;
+            text-align: left;
+            vertical-align: middle;
+
+            @include media($large-screen) {
+                padding-left:60px;
+            }
+            h1 {
+                font-size: 55px;
+                margin-bottom:0;
+            }
+        }
+        ul {
+            list-style:outside;
+            margin-left:20px;
+        }
+        .sub-div {
+            @include span-columns(12);
+            label {
+                float:left;
+                width:150px;
+                position: relative;
+                top:5px;
+            }
+            input {
+                float:left;
+                width:calc(100% - 150px);
+            }
+        }
+        .btn-subscribe {
+            @include span-columns(12);
+
+            @include media($large-screen) {
+                @include span-columns(4);
+                @include shift(8);
+            }
+        }
+    }
+    .right-half {
+        @include span-columns(12);
+        display: table;
+        width: 100%;
+        @include media($medium-screen) {
+            @include span-columns(6);
+            display: table;
+        }
+        .right {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+
+    .right-iphone {
+        position: relative;
+        @include transform(translateX(50%));
+        max-width: 300px;
+        width:80%;
+        overflow: hidden;
+        
+        @include media($medium-screen) {
+            width:80%;
+            @include transform(translateX(20%));
+        }
+        @include media($large-screen) {
+            @include transform(translateX(50%));
+            width:50%;
+            min-width: 300px;
+        }
+
+        .screen {
+            position: absolute;
+            top:13.3%;
+            left:7.9%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width:84%;
+            max-height: 420px;
+            height:100%;
+            @include transition(background-image .3s);
+
+            @include media($medium-screen) {
+                width:84%;
+                left:7%;
+                top:13.2%;
+                max-height: 480px;
+            }
+        }
+
+
+        #screen_0 {
+            background-image: url("../onbudget/img/screenshot/appscreen01.png");
+        }
+        #screen_1 {
+            background-image: url("../onbudget/img/screenshot/appscreen02.png");
+            left:100%;
+        }
+        .phone {
+
+        }
+    }
+
+}
