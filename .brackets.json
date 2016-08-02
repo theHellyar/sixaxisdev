@@ -1,0 +1,27 @@
+{
+    "sass.enabled": false,
+    "path": {
+        "scss/onbudget.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../css/",
+                "includePaths": null,
+                "sourceComments": true,
+                "outputStyle": "nested"
+            },
+            "linting.collapsed": false,
+            "linting.SCSS Lint.collapsed": false
+        },
+        "scss/root.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../css/",
+                "includePaths": null,
+                "sourceComments": true,
+                "outputStyle": "nested"
+            },
+            "linting.collapsed": false,
+            "linting.SCSS Lint.collapsed": false
+        }
+    }
+}
